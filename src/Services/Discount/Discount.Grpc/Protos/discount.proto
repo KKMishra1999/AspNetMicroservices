@@ -34,7 +34,7 @@ message DeleteDiscountResponse {
 }
 
 message CouponModel {
-	int32 = 1;
+	int32 Id = 1;
 	string productName = 2;
 	string description = 3;
 	int32 amount = 4;
