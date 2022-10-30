@@ -24,7 +24,19 @@ namespace Ordering.Infrastructure.Persistence
         {
             return new List<Order>
             {
-                new Order() {UserName = "swn", FirstName = "Koustav", LastName = "Mishra", EmailAddress = "mkk6160@gmail.com", AddressLine = "Contai", Country = "India", TotalPrice = 350 }
+                new Order() {UserName = "swn", 
+                    FirstName = "Koustav", 
+                    LastName = "Mishra", 
+                    EmailAddress = "mkk6160@gmail.com", 
+                    AddressLine = "Contai", 
+                    State = "West Bengal",
+                    Country = "India",
+                    ZipCode = "721401",
+                    TotalPrice = 350, 
+                    CardName="KM", 
+                    CardNumber="democard", 
+                    CVV = "935", 
+                    Expiration="10/27" }
             };
         }
     }
