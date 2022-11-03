@@ -3,6 +3,7 @@ using Basket.API.Repositories;
 using Discount.Grpc.Protos;
 using MassTransit;
 using Microsoft.OpenApi.Models;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -38,6 +39,9 @@ builder.Services.AddMassTransit(config =>
         cfg.Host(builder.Configuration.GetValue<string>("EventBusSettings:HostAddress"));
     });
 });
+
+//AutoMapper configuration
+builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
 var app = builder.Build();
 
